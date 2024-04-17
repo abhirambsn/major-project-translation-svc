@@ -10,7 +10,7 @@ app = FastAPI(
     version="0.1.0",
     docs_url="/docs",
     redoc_url="/redoc",
-    openapi_url="/openapi.json",
+    openapi_url="/api/v1/translate/openapi.json",
     contact={
         "name": "Abhiram B.S.N.",
         "email": "abhirambsn@gmail.com",

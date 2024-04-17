@@ -11,7 +11,7 @@ class Translator:
 
     
     def __init__(self):
-        model_path = str(Path(__file__).parent.parent.parent / "nllb-pretrained-ckpt")
+        model_path = str(Path(__file__).parent.parent / "nllb-pretrained-ckpt")
 
         self.translator = CTranslator(model_path)
         self.tokenizer = NllbTokenizerFast.from_pretrained("facebook/nllb-200-distilled-600M")

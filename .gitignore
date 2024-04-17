@@ -1,0 +1,9 @@
+.venv
+.env
+.idea
+__pycache__
+run.sh
+logs/*
+.vscode
+.DS_Store
+nllb-pretrained-ckpt

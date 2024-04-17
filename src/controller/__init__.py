@@ -1,0 +1,1 @@
+from .TranslatorController import router as TranslatorController

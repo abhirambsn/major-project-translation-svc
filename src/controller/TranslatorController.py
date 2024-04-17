@@ -3,7 +3,7 @@ from service import TranslatorService
 from repository import TranslatorRepository
 from dtypes import TranslateRequest, make_response
 
-router = APIRouter(prefix="/api/v1/translator", tags=["Translator"])
+router = APIRouter(prefix="/api/v1/translate", tags=["Translator"])
 
 service = TranslatorService(
     repo=TranslatorRepository()

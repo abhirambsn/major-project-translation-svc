@@ -31,7 +31,3 @@ app.add_middleware(
 @app.get("/")
 async def perform_health_check(response: Response):
     return make_response(response, status=200, message="Healthy", data=None)
-
-@app.get("/healthz")
-async def perform_healthz_check(response: Response):
-    return make_response(response, status=200, message="Healthy", data=None)

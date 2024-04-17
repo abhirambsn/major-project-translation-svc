@@ -9,6 +9,10 @@ service = TranslatorService(
     repo=TranslatorRepository()
 )
 
+@router.get("/healthz")
+async def perform_healthz_check(response: Response):
+    return make_response(response, status=200, message="Healthy", data=None)
+
 @router.post("/")
 async def translate(req: TranslateRequest, response: Response):
     success, text, time = service.process_translation_request(req)

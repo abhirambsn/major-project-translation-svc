@@ -8,7 +8,8 @@ COPY requirements.txt /tmp/requirements.txt
 RUN pip install --no-cache-dir -r /tmp/requirements.txt
 
 WORKDIR /app
-COPY . /app
-RUN sh /app/download_and_convert_model.sh
+COPY ./src /app
+COPY ./download_and_convert_model.sh /tmp
+RUN sh /tmp/download_and_convert_model.sh
 
 ENTRYPOINT ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]

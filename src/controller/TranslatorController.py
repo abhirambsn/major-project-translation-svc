@@ -4,7 +4,7 @@ from repository import TranslatorRepository
 from dtypes import TranslateRequest, make_response, make_ws_response
 from util import WsConnectionManager
 
-router = APIRouter(prefix="/api/v1/translate", tags=["Translator"])
+router = APIRouter(tags=["Translator"])
 
 service = TranslatorService(
     repo=TranslatorRepository()
@@ -12,11 +12,11 @@ service = TranslatorService(
 
 conn_manager = WsConnectionManager()
 
-@router.get("/healthz")
+@router.get("/api/v1/translate/healthz")
 async def perform_healthz_check(response: Response):
     return make_response(response, status=200, message="Healthy", data=None)
 
-@router.websocket("/")
+@router.websocket("/ws/v1/translate")
 async def translate(websocket: WebSocket):
     await conn_manager.connect(websocket)
     try:

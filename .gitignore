@@ -7,3 +7,4 @@ logs/*
 .vscode
 .DS_Store
 nllb-pretrained-ckpt
+.pytest_cache

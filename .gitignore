@@ -8,3 +8,5 @@ logs/*
 .DS_Store
 nllb-pretrained-ckpt
 .pytest_cache/
+report.html
+assets/

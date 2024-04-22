@@ -34,6 +34,8 @@ pycparser==2.21
 pydantic==2.6.4
 pydantic_core==2.16.3
 pytest==8.1.1
+pytest-html==4.1.1
+pytest-metadata==3.1.1
 python-dotenv==1.0.1
 PyYAML==6.0.1
 regex==2023.12.25
